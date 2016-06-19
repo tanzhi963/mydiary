@@ -18,12 +18,7 @@ class DiaryTableViewController: UITableViewController
     
     lazy var documentsPath:String = {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        return paths.first!
-    }()                                     //本程序目录位置
-
-    var diarydataArray:Array<String>?       //每一行表格填写的内容
-    var diaryquantity = 0                   //日记数量
-    
+        return paths.first!}()                                     //本程序目录位置
     
 /***************函数声明区********************/
     
@@ -34,21 +29,20 @@ class DiaryTableViewController: UITableViewController
     {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+// Uncomment the following line to preserve selection between presentations
+// self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+// self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
 //        tableView.dataSource = self
 //        tableView.delegate = self
-        diarydataArray = ["diarydata1","diarydata2","diarydata3","diarydata4","diarydata5"]
         tableView.reloadData()
-        print(documentsPath)
+//        print(documentsPath)
 //        tableView.editing = true
 //        addnewdiary(timeget(), title: "test", content: "this is a test!!!")
-        CoreDataStack.defaultStack().saveContext()
-//        readdiarydetail()
+//        CoreDataStack.defaultStack().saveContext()
+//        getdiarydetail()
 //        updatediarydata()
         
     }
@@ -56,31 +50,33 @@ class DiaryTableViewController: UITableViewController
     
 //==================================================================
 //函数名：updatediarydata
-//作者：leon
-//日期：2016.06.12
 //功能：从coredata中读取表，更新当前日记状态，包括日记数量
 //输入参数：无
 //返回值：无
-//修改记录：
 //==================================================================
     
     func updatediarydata()
     {
-        let context = CoreDataStack.defaultStack().context              //获取上下文
-        let request = NSFetchRequest(entityName: "Diartdetail")         //构建抓取请求，名字为“Diartdetail”表
-        
-        do
-        {
-            let details = (try context.executeFetchRequest(request)) as! [Diartdetail]      //读取每一个coredata数据
-            diaryquantity = details.count
-        }
-        catch
-        {
-            print("Fetch failed...")
-        }
-
+//        let context = CoreDataStack.defaultStack().context              //获取上下文
+//        let request = NSFetchRequest(entityName: "Diartdetail")         //构建抓取请求，名字为“Diartdetail”表
+//        
+//        do
+//        {
+//            let details = (try context.executeFetchRequest(request)) as! [Diartdetail]      //读取每一个coredata数据
+//        }
+//        catch
+//        {
+//            print("Fetch failed...")
+//        }
     }
-    
+
+//==================================================================
+//函数名：getdiaryquantity
+//功能：获取当前一共多少行数据
+//输入参数：无
+//返回值：数据行数
+//==================================================================
+
     
     func getdiaryquantity() -> Int
     {
@@ -97,20 +93,15 @@ class DiaryTableViewController: UITableViewController
             print("Fetch failed...")
             return 0
         }
-        
-        
     }
    
 //==================================================================
 //函数名：addnewdiary
-//作者：leon
-//日期：2016.06.12
 //功能：添加新的日记
 //输入参数：time:String,title:String,content:String   时间，标题，内容
 //返回值：无
-//修改记录：
-//==================================================================
 
+//==================================================================
     
     func addnewdiary(time:String,title:String,content:String)
     {
@@ -123,17 +114,13 @@ class DiaryTableViewController: UITableViewController
         diary.setValue(time, forKey: "createdate")
         diary.setValue(title, forKey: "title")
         diary.setValue(content, forKey: "content")
-        
     }
  
 //==================================================================
 //函数名：timeget()
-//作者：leon
-//日期：2016.06.12
 //功能：获取当前系统时间
 //输入参数：无
 //返回值：字符串形式当前时间
-//修改记录：
 //==================================================================
 
     
@@ -150,12 +137,9 @@ class DiaryTableViewController: UITableViewController
 
 //==================================================================
 //函数名：readdiarydetail()
-//作者：leon
-//日期：2016.06.12
-//功能：读取coredata数据，打印出来（仅适用在测试模式）
+//功能：读取coredata所有数据，打印出来（仅适用在测试模式）
 //输入参数：无
 //返回值：无
-//修改记录：
 //==================================================================
     
     func readdiarydetail()
@@ -178,10 +162,9 @@ class DiaryTableViewController: UITableViewController
         {
             print("Fetch failed...")
         }
-
-        
     }
 
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -190,11 +173,27 @@ class DiaryTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
+    
+//==================================================================
+//函数名：numberOfSectionsInTableView()
+//功能：整个tableview中有几个分区
+//输入参数：自动
+//返回值：自动
+//==================================================================
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+
+    
+//==================================================================
+//函数名：tableView(tableView: UITableView, numberOfRowsInSection section: Int)
+//功能：设置tableview中每个分区多少行数据
+//输入参数：自动
+//返回值：自动
+//==================================================================
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -202,16 +201,33 @@ class DiaryTableViewController: UITableViewController
         return getdiaryquantity()
     }
 
-    
+//==================================================================
+//函数名：tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
+//功能：设置每个tableview的cell中的显示内容
+//输入参数：自动
+//返回值：自动
+//==================================================================
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
         let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default,reuseIdentifier: "cellid")
-        cell.textLabel?.text = diarydataArray![indexPath.row]
+        let context = CoreDataStack.defaultStack().context              //获取上下文
+        let request = NSFetchRequest(entityName: "Diartdetail")         //构建抓取请求
+        do
+        {
+            let details:Array = (try context.executeFetchRequest(request)) as! [Diartdetail]
+            cell.textLabel?.text = details[indexPath.row].title
+        }
+        catch
+        {
+            print("Fetch failed...")
+        }
+//        cell.textLabel?.text = diarydataArray![indexPath.row]
         
         return cell
     }
+    
+    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
@@ -228,8 +244,8 @@ class DiaryTableViewController: UITableViewController
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
-        diarydataArray?.removeAtIndex(indexPath.row)
-        tableView.reloadData()
+//        diarydataArray?.removeAtIndex(indexPath.row)
+//        tableView.reloadData()
     }
     
 

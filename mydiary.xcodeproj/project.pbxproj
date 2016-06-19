@@ -97,7 +97,7 @@
 			children = (
 				85FA180E1D1045B500134ED4 /* image */,
 				85FA180F1D1045D100134ED4 /* Controller */,
-				859F2DE11CF1B1B700232F21 /* medially */,
+				859F2DE11CF1B1B700232F21 /* mydially */,
 				859F2DF61CF1B1B800232F21 /* mydiaryTests */,
 				859F2E011CF1B1B800232F21 /* mydiaryUITests */,
 				859F2DE01CF1B1B700232F21 /* Products */,
@@ -114,7 +114,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		859F2DE11CF1B1B700232F21 /* medially */ = {
+		859F2DE11CF1B1B700232F21 /* mydially */ = {
 			isa = PBXGroup;
 			children = (
 				859E64DD1D0AA18A00AECDD2 /* CoreDataStack.swift */,
@@ -126,7 +126,7 @@
 				859F2DEB1CF1B1B800232F21 /* LaunchScreen.storyboard */,
 				859F2DEE1CF1B1B800232F21 /* Info.plist */,
 			);
-			name = medially;
+			name = mydially;
 			path = mydiary;
 			sourceTree = "<group>";
 		};
