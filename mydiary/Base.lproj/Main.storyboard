@@ -28,40 +28,24 @@
         <scene sceneID="pyK-rg-Omn">
             <objects>
                 <tableViewController title="日记" id="Ad1-wH-vxC" customClass="DiaryTableViewController" customModule="mydiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="84z-bi-h7C">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="84z-bi-h7C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="CzS-55-1fU">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="diarydetailView" textLabel="lLx-fG-CIy" imageView="Tek-kc-RPn" style="IBUITableViewCellStyleDefault" id="CZ7-ly-bXE">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CZ7-ly-bXE" id="oOL-cT-Glf">
-                                            <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lLx-fG-CIy">
-                                                    <rect key="frame" x="73" y="0.0" width="180" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="logo.png" id="Tek-kc-RPn">
-                                                    <rect key="frame" x="15" y="0.0" width="43" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="djf-LF-jFS" kind="push" id="OiO-Ne-53z"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="diarydetailView" id="CZ7-ly-bXE">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CZ7-ly-bXE" id="oOL-cT-Glf">
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="djf-LF-jFS" kind="push" id="YwR-ZA-Yc2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Ad1-wH-vxC" id="wYY-J6-Pcu"/>
                             <outlet property="delegate" destination="Ad1-wH-vxC" id="W1h-jR-QsD"/>
@@ -122,6 +106,7 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="SMA-ZL-GaL" id="5Pj-WE-xHg"/>
                             <outlet property="delegate" destination="SMA-ZL-GaL" id="pu3-QP-5mB"/>
@@ -190,11 +175,11 @@
             </objects>
             <point key="canvasLocation" x="789" y="1228"/>
         </scene>
-        <!--我的-->
+        <!--Navigation Controller-->
         <scene sceneID="6oB-Ey-C8a">
             <objects>
                 <navigationController id="WWD-DB-dW4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="Bag-JL-bX2"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="Bag-JL-bX2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aQy-gt-smF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -207,11 +192,11 @@
             </objects>
             <point key="canvasLocation" x="403" y="1228"/>
         </scene>
-        <!--计划-->
+        <!--Navigation Controller-->
         <scene sceneID="vCU-2h-qLn">
             <objects>
                 <navigationController id="mhe-Oh-BeZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="计划" id="ycH-f7-7eD"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="ycH-f7-7eD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f29-R0-bNh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -224,17 +209,17 @@
             </objects>
             <point key="canvasLocation" x="403" y="602"/>
         </scene>
-        <!--日记-->
+        <!--Navigation Controller-->
         <scene sceneID="48Y-f8-1Zg">
             <objects>
                 <navigationController id="bXs-pT-Cld" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="日记" id="G82-AN-7pP"/>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="G82-AN-7pP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9dy-cc-sWl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Ad1-wH-vxC" kind="relationship" relationship="rootViewController" id="Tuv-1t-MVM"/>
+                        <segue destination="Ad1-wH-vxC" kind="relationship" relationship="rootViewController" id="imO-Tx-6UQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cd-Uj-UvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,7 +227,4 @@
             <point key="canvasLocation" x="403" y="-21"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo.png" width="144" height="144"/>
-    </resources>
 </document>

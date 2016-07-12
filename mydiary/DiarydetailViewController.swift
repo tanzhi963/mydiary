@@ -24,6 +24,10 @@ class DiarydetailViewController: UIViewController
         
         lable1.text = "you click in \(indexrow) line"
         
+        self.title = "详细内容"
+        
+//        self.navigationController?.navigationBar.barTintColor = UIColor.blueColor()
+        
         
         detailView.addSubview(lable1)
         self.view.addSubview(detailView)

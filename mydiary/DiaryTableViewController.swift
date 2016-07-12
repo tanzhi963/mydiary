@@ -35,6 +35,12 @@ class DiaryTableViewController: UITableViewController
 // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+//        self.navigationController?.navigationBar.barTintColor = UIColor.greenColor()
+        
+        let addNewDiaryButton:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(DiaryTableViewController.addNewDiaryButton))
+        
+        self.navigationItem.rightBarButtonItem = addNewDiaryButton
+        
 //        tableView.dataSource = self
 //        tableView.delegate = self
         tableView.reloadData()
@@ -46,7 +52,16 @@ class DiaryTableViewController: UITableViewController
 //        updatediarydata()
         
     }
-    
+//==================================================================
+//函数名：addNewDiaryButton
+//功能：点击添加按钮，增加新的日记内容
+//输入参数：无
+//返回值：无
+//==================================================================
+    func addNewDiaryButton()
+    {
+        print("Add a New!!")
+    }
     
 //==================================================================
 //函数名：updatediarydata
@@ -100,7 +115,6 @@ class DiaryTableViewController: UITableViewController
 //功能：添加新的日记
 //输入参数：time:String,title:String,content:String   时间，标题，内容
 //返回值：无
-
 //==================================================================
     
     func addnewdiary(time:String,title:String,content:String)
@@ -228,6 +242,14 @@ class DiaryTableViewController: UITableViewController
     }
     
     
+//==================================================================
+//函数名：tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+//功能：设置一行被点击后触发的事件
+//输入参数：自动
+//返回值：自动
+//==================================================================
+
+    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
@@ -237,10 +259,26 @@ class DiaryTableViewController: UITableViewController
         self.navigationController?.pushViewController(diarydetailView, animated: true)
     }
     
+//==================================================================
+//函数名：tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle
+//功能：
+//输入参数：自动
+//返回值：自动
+//==================================================================
+
+    
     override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle
     {
         return UITableViewCellEditingStyle.Delete
     }
+    
+//==================================================================
+//函数名：tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+//功能：
+//输入参数：自动
+//返回值：自动
+//==================================================================
+
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
