@@ -60,7 +60,9 @@ class DiaryTableViewController: UITableViewController
 //==================================================================
     func addNewDiaryButton()
     {
-        print("Add a New!!")
+        let AddNewDiaryView = AddNewDiaryViewController()
+        
+        self.navigationController?.pushViewController(AddNewDiaryView, animated: true)
     }
     
 //==================================================================

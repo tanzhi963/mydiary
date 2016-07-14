@@ -22,6 +22,7 @@
 		859F2E171CF1B50E00232F21 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F2E161CF1B50E00232F21 /* DiaryTableViewController.swift */; };
 		859F2E191CF1B58A00232F21 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F2E181CF1B58A00232F21 /* UserTableViewController.swift */; };
 		859F2E221CF9912F00232F21 /* DiarydetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F2E211CF9912F00232F21 /* DiarydetailViewController.swift */; };
+		85CAB12C1D3673F100567996 /* AddNewDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB12B1D3673F100567996 /* AddNewDiaryViewController.swift */; };
 		85FA180B1D1042F000134ED4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FA180A1D1042F000134ED4 /* logo.png */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		859F2E161CF1B50E00232F21 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiaryTableViewController.swift; path = mydiary/DiaryTableViewController.swift; sourceTree = "<group>"; };
 		859F2E181CF1B58A00232F21 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewController.swift; path = mydiary/UserTableViewController.swift; sourceTree = "<group>"; };
 		859F2E211CF9912F00232F21 /* DiarydetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiarydetailViewController.swift; path = mydiary/DiarydetailViewController.swift; sourceTree = "<group>"; };
+		85CAB12B1D3673F100567996 /* AddNewDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddNewDiaryViewController.swift; path = mydiary/AddNewDiaryViewController.swift; sourceTree = "<group>"; };
 		85FA180A1D1042F000134ED4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				859F2DE41CF1B1B800232F21 /* ViewController.swift */,
 				859F2E161CF1B50E00232F21 /* DiaryTableViewController.swift */,
 				859F2E211CF9912F00232F21 /* DiarydetailViewController.swift */,
+				85CAB12B1D3673F100567996 /* AddNewDiaryViewController.swift */,
 				859F2E121CF1B4CF00232F21 /* PlanTableViewController.swift */,
 				857829881CF9D95900505798 /* PlandetailViewController.swift */,
 				859F2E181CF1B58A00232F21 /* UserTableViewController.swift */,
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				859F2E191CF1B58A00232F21 /* UserTableViewController.swift in Sources */,
+				85CAB12C1D3673F100567996 /* AddNewDiaryViewController.swift in Sources */,
 				859F2DE51CF1B1B800232F21 /* ViewController.swift in Sources */,
 				859E64D81D0A9FAD00AECDD2 /* Diarydetaildata.xcdatamodeld in Sources */,
 				859F2E171CF1B50E00232F21 /* DiaryTableViewController.swift in Sources */,
@@ -455,6 +459,7 @@
 		859F2E081CF1B1B800232F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = mydiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = power.mydiary;
@@ -465,6 +470,7 @@
 		859F2E091CF1B1B800232F21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = mydiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = power.mydiary;
