@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85101AF61D412DC9000A0EF2 /* Angry_V0.1_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AEC1D412DC9000A0EF2 /* Angry_V0.1_600*600.png */; };
+		85101AF71D412DC9000A0EF2 /* Angry_V0.2_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AED1D412DC9000A0EF2 /* Angry_V0.2_600*600.png */; };
+		85101AF81D412DC9000A0EF2 /* Chuckle_V0.1_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AEE1D412DC9000A0EF2 /* Chuckle_V0.1_600*600.png */; };
+		85101AF91D412DC9000A0EF2 /* Chuckle_V0.2_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AEF1D412DC9000A0EF2 /* Chuckle_V0.2_600*600.png */; };
+		85101AFA1D412DC9000A0EF2 /* Happy_V0.1_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AF01D412DC9000A0EF2 /* Happy_V0.1_600*600.png */; };
+		85101AFB1D412DC9000A0EF2 /* Happy_V0.2_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AF11D412DC9000A0EF2 /* Happy_V0.2_600*600.png */; };
+		85101AFC1D412DC9000A0EF2 /* Normal_V0.1_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AF21D412DC9000A0EF2 /* Normal_V0.1_600*600.png */; };
+		85101AFD1D412DC9000A0EF2 /* Normal_V0.2_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AF31D412DC9000A0EF2 /* Normal_V0.2_600*600.png */; };
+		85101AFE1D412DC9000A0EF2 /* Sad_V0.1_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AF41D412DC9000A0EF2 /* Sad_V0.1_600*600.png */; };
+		85101AFF1D412DC9000A0EF2 /* Sad_V0.2_600*600.png in Resources */ = {isa = PBXBuildFile; fileRef = 85101AF51D412DC9000A0EF2 /* Sad_V0.2_600*600.png */; };
 		857829891CF9D95900505798 /* PlandetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857829881CF9D95900505798 /* PlandetailViewController.swift */; };
 		859E64D81D0A9FAD00AECDD2 /* Diarydetaildata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 859E64D61D0A9FAD00AECDD2 /* Diarydetaildata.xcdatamodeld */; };
 		859E64DB1D0AA06D00AECDD2 /* Diartdetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E64D91D0AA06C00AECDD2 /* Diartdetail+CoreDataProperties.swift */; };
@@ -44,6 +54,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85101AEC1D412DC9000A0EF2 /* Angry_V0.1_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Angry_V0.1_600*600.png"; sourceTree = "<group>"; };
+		85101AED1D412DC9000A0EF2 /* Angry_V0.2_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Angry_V0.2_600*600.png"; sourceTree = "<group>"; };
+		85101AEE1D412DC9000A0EF2 /* Chuckle_V0.1_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chuckle_V0.1_600*600.png"; sourceTree = "<group>"; };
+		85101AEF1D412DC9000A0EF2 /* Chuckle_V0.2_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chuckle_V0.2_600*600.png"; sourceTree = "<group>"; };
+		85101AF01D412DC9000A0EF2 /* Happy_V0.1_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Happy_V0.1_600*600.png"; sourceTree = "<group>"; };
+		85101AF11D412DC9000A0EF2 /* Happy_V0.2_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Happy_V0.2_600*600.png"; sourceTree = "<group>"; };
+		85101AF21D412DC9000A0EF2 /* Normal_V0.1_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Normal_V0.1_600*600.png"; sourceTree = "<group>"; };
+		85101AF31D412DC9000A0EF2 /* Normal_V0.2_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Normal_V0.2_600*600.png"; sourceTree = "<group>"; };
+		85101AF41D412DC9000A0EF2 /* Sad_V0.1_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sad_V0.1_600*600.png"; sourceTree = "<group>"; };
+		85101AF51D412DC9000A0EF2 /* Sad_V0.2_600*600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sad_V0.2_600*600.png"; sourceTree = "<group>"; };
 		857829881CF9D95900505798 /* PlandetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlandetailViewController.swift; path = mydiary/PlandetailViewController.swift; sourceTree = "<group>"; };
 		859E64D71D0A9FAD00AECDD2 /* Diarydetaildata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diarydetaildata.xcdatamodel; sourceTree = "<group>"; };
 		859E64D91D0AA06C00AECDD2 /* Diartdetail+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diartdetail+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -94,6 +114,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85101AEB1D412DC9000A0EF2 /* mood */ = {
+			isa = PBXGroup;
+			children = (
+				85101AEC1D412DC9000A0EF2 /* Angry_V0.1_600*600.png */,
+				85101AED1D412DC9000A0EF2 /* Angry_V0.2_600*600.png */,
+				85101AEE1D412DC9000A0EF2 /* Chuckle_V0.1_600*600.png */,
+				85101AEF1D412DC9000A0EF2 /* Chuckle_V0.2_600*600.png */,
+				85101AF01D412DC9000A0EF2 /* Happy_V0.1_600*600.png */,
+				85101AF11D412DC9000A0EF2 /* Happy_V0.2_600*600.png */,
+				85101AF21D412DC9000A0EF2 /* Normal_V0.1_600*600.png */,
+				85101AF31D412DC9000A0EF2 /* Normal_V0.2_600*600.png */,
+				85101AF41D412DC9000A0EF2 /* Sad_V0.1_600*600.png */,
+				85101AF51D412DC9000A0EF2 /* Sad_V0.2_600*600.png */,
+			);
+			name = mood;
+			path = image/mood;
+			sourceTree = "<group>";
+		};
 		859F2DD61CF1B1B700232F21 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +191,7 @@
 		85FA180E1D1045B500134ED4 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				85101AEB1D412DC9000A0EF2 /* mood */,
 				85FA180A1D1042F000134ED4 /* logo.png */,
 			);
 			name = image;
@@ -281,8 +320,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				85FA180B1D1042F000134ED4 /* logo.png in Resources */,
+				85101AF81D412DC9000A0EF2 /* Chuckle_V0.1_600*600.png in Resources */,
+				85101AF71D412DC9000A0EF2 /* Angry_V0.2_600*600.png in Resources */,
+				85101AF91D412DC9000A0EF2 /* Chuckle_V0.2_600*600.png in Resources */,
+				85101AFE1D412DC9000A0EF2 /* Sad_V0.1_600*600.png in Resources */,
+				85101AFA1D412DC9000A0EF2 /* Happy_V0.1_600*600.png in Resources */,
+				85101AFF1D412DC9000A0EF2 /* Sad_V0.2_600*600.png in Resources */,
 				859F2DED1CF1B1B800232F21 /* LaunchScreen.storyboard in Resources */,
+				85101AFC1D412DC9000A0EF2 /* Normal_V0.1_600*600.png in Resources */,
 				859F2DE81CF1B1B800232F21 /* Main.storyboard in Resources */,
+				85101AFD1D412DC9000A0EF2 /* Normal_V0.2_600*600.png in Resources */,
+				85101AFB1D412DC9000A0EF2 /* Happy_V0.2_600*600.png in Resources */,
+				85101AF61D412DC9000A0EF2 /* Angry_V0.1_600*600.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,10 +509,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = mydiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = power.mydiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -471,10 +522,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = mydiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = power.mydiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

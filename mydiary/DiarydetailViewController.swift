@@ -20,11 +20,13 @@ class DiarydetailViewController: UIViewController
         let detailView:UIView = UIView.init(frame: UIScreen.mainScreen().bounds)
         detailView.backgroundColor = UIColor.lightGrayColor()
         
+        self.title = "详细内容"
+        
         let lable1:UILabel = UILabel.init(frame: CGRectMake(20, 100, 150, 30))
         
         lable1.text = "you click in \(indexrow) line"
         
-        self.title = "详细内容"
+        
         
 //        self.navigationController?.navigationBar.barTintColor = UIColor.blueColor()
         

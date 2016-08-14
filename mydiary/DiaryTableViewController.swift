@@ -44,6 +44,8 @@ class DiaryTableViewController: UITableViewController
 //        tableView.dataSource = self
 //        tableView.delegate = self
         tableView.reloadData()
+        editDiaryButtonInit()
+//        readdiarydetail()
 //        print(documentsPath)
 //        tableView.editing = true
 //        addnewdiary(timeget(), title: "test", content: "this is a test!!!")
@@ -52,12 +54,12 @@ class DiaryTableViewController: UITableViewController
 //        updatediarydata()
         
     }
-//==================================================================
-//函数名：addNewDiaryButton
-//功能：点击添加按钮，增加新的日记内容
-//输入参数：无
-//返回值：无
-//==================================================================
+    //==================================================================
+    //函数名：addNewDiaryButton
+    //功能：点击添加按钮，增加新的日记内容
+    //输入参数：无
+    //返回值：无
+    //==================================================================
     func addNewDiaryButton()
     {
         let AddNewDiaryView = AddNewDiaryViewController()
@@ -65,12 +67,46 @@ class DiaryTableViewController: UITableViewController
         self.navigationController?.pushViewController(AddNewDiaryView, animated: true)
     }
     
-//==================================================================
-//函数名：updatediarydata
-//功能：从coredata中读取表，更新当前日记状态，包括日记数量
-//输入参数：无
-//返回值：无
-//==================================================================
+    //==================================================================
+    //函数名：editDiaryButtonInit
+    //功能：编辑按钮的初始化函数
+    //输入参数：无
+    //返回值：无
+    //==================================================================
+    
+    
+    func editDiaryButtonInit()
+    {
+        let editDiaryButton:UIBarButtonItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(DiaryTableViewController.editButtonClick))
+        self.navigationItem.leftBarButtonItem = editDiaryButton
+    }
+    
+    //==================================================================
+    //函数名：editButtonClick
+    //功能：按下编辑按钮后触发的方法
+    //输入参数：无
+    //返回值：无
+    //==================================================================
+    
+    func editButtonClick()
+    {
+        if tableView.editing
+        {
+            tableView.setEditing(false, animated: true)
+        }
+        else
+        {
+            tableView.setEditing(true, animated: true)
+        }
+    }
+    
+        
+    //==================================================================
+    //函数名：updatediarydata
+    //功能：从coredata中读取表，更新当前日记状态，包括日记数量
+    //输入参数：无
+    //返回值：无
+    //==================================================================
     
     func updatediarydata()
     {
@@ -87,12 +123,12 @@ class DiaryTableViewController: UITableViewController
 //        }
     }
 
-//==================================================================
-//函数名：getdiaryquantity
-//功能：获取当前一共多少行数据
-//输入参数：无
-//返回值：数据行数
-//==================================================================
+    //==================================================================
+    //函数名：getdiaryquantity
+    //功能：获取当前一共多少行数据
+    //输入参数：无
+    //返回值：数据行数
+    //==================================================================
 
     
     func getdiaryquantity() -> Int
@@ -112,12 +148,12 @@ class DiaryTableViewController: UITableViewController
         }
     }
    
-//==================================================================
-//函数名：addnewdiary
-//功能：添加新的日记
-//输入参数：time:String,title:String,content:String   时间，标题，内容
-//返回值：无
-//==================================================================
+    //==================================================================
+    //函数名：addnewdiary
+    //功能：添加新的日记
+    //输入参数：time:String,title:String,content:String   时间，标题，内容
+    //返回值：无
+    //==================================================================
     
     func addnewdiary(time:String,title:String,content:String)
     {
@@ -132,70 +168,18 @@ class DiaryTableViewController: UITableViewController
         diary.setValue(content, forKey: "content")
     }
  
-//==================================================================
-//函数名：timeget()
-//功能：获取当前系统时间
-//输入参数：无
-//返回值：字符串形式当前时间
-//==================================================================
 
-    
-    func timeget() -> String
-    {
-        let nowDate = NSDate()
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let dateString:String = formatter.stringFromDate(nowDate)
-//        print(dateString)
-        return dateString
-        
-    }
 
-//==================================================================
-//函数名：readdiarydetail()
-//功能：读取coredata所有数据，打印出来（仅适用在测试模式）
-//输入参数：无
-//返回值：无
-//==================================================================
-    
-    func readdiarydetail()
-    {
-        //获取上下文
-        let context = CoreDataStack.defaultStack().context
-        
-        //构建抓取请求
-        let request = NSFetchRequest(entityName: "Diartdetail")
-        
-        do
-        {
-            let details = (try context.executeFetchRequest(request)) as! [Diartdetail]
-            for Diartdetail in details
-            {
-                print("\(Diartdetail.createdate!), \(Diartdetail.title!), \(Diartdetail.content!)")
-            }
-        }
-        catch
-        {
-            print("Fetch failed...")
-        }
-    }
-
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
     
-//==================================================================
-//函数名：numberOfSectionsInTableView()
-//功能：整个tableview中有几个分区
-//输入参数：自动
-//返回值：自动
-//==================================================================
+    //==================================================================
+    //函数名：numberOfSectionsInTableView()
+    //功能：整个tableview中有几个分区
+    //输入参数：自动
+    //返回值：自动
+    //==================================================================
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
@@ -204,12 +188,12 @@ class DiaryTableViewController: UITableViewController
     }
 
     
-//==================================================================
-//函数名：tableView(tableView: UITableView, numberOfRowsInSection section: Int)
-//功能：设置tableview中每个分区多少行数据
-//输入参数：自动
-//返回值：自动
-//==================================================================
+    //==================================================================
+    //函数名：tableView(tableView: UITableView, numberOfRowsInSection section: Int)
+    //功能：设置tableview中每个分区多少行数据
+    //输入参数：自动
+    //返回值：自动
+    //==================================================================
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -217,12 +201,12 @@ class DiaryTableViewController: UITableViewController
         return getdiaryquantity()
     }
 
-//==================================================================
-//函数名：tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
-//功能：设置每个tableview的cell中的显示内容
-//输入参数：自动
-//返回值：自动
-//==================================================================
+    //==================================================================
+    //函数名：tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
+    //功能：设置每个tableview的cell中的显示内容
+    //输入参数：自动
+    //返回值：自动
+    //==================================================================
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
@@ -244,12 +228,12 @@ class DiaryTableViewController: UITableViewController
     }
     
     
-//==================================================================
-//函数名：tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-//功能：设置一行被点击后触发的事件
-//输入参数：自动
-//返回值：自动
-//==================================================================
+    //==================================================================
+    //函数名：tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    //功能：设置一行被点击后触发的事件
+    //输入参数：自动
+    //返回值：自动
+    //==================================================================
 
     
     
@@ -261,12 +245,12 @@ class DiaryTableViewController: UITableViewController
         self.navigationController?.pushViewController(diarydetailView, animated: true)
     }
     
-//==================================================================
-//函数名：tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle
-//功能：
-//输入参数：自动
-//返回值：自动
-//==================================================================
+    //==================================================================
+    //函数名：tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle
+    //功能：
+    //输入参数：自动
+    //返回值：自动
+    //==================================================================
 
     
     override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle
@@ -274,20 +258,71 @@ class DiaryTableViewController: UITableViewController
         return UITableViewCellEditingStyle.Delete
     }
     
-//==================================================================
-//函数名：tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
-//功能：
-//输入参数：自动
-//返回值：自动
-//==================================================================
+    //==================================================================
+    //函数名：tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    //功能：响应删除操作
+    //输入参数：自动
+    //返回值：自动
+    //==================================================================
 
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
-//        diarydataArray?.removeAtIndex(indexPath.row)
-//        tableView.reloadData()
+        let context = CoreDataStack.defaultStack().context              //获取上下文
+        let request = NSFetchRequest(entityName: "Diartdetail")         //构建抓取请求，名字为“Diartdetail”表
+        
+        do
+        {
+            let details = (try context.executeFetchRequest(request)) as! [Diartdetail]      //读取每一个coredata数据
+            context.deleteObject(details[indexPath.row])                                    //按照点击的行，删除数据
+            
+        }
+        catch
+        {
+            print("Fetch failed...")
+        }
+        
+        tableView.reloadData()
+
     }
     
+    
+    //==================================================================
+    //函数名：readdiarydetail()
+    //功能：读取coredata所有数据，打印出来（仅适用在测试模式）
+    //输入参数：无
+    //返回值：无
+    //==================================================================
+    
+    func readdiarydetail()
+    {
+        //获取上下文
+        let context = CoreDataStack.defaultStack().context
+        
+        //构建抓取请求
+        let request = NSFetchRequest(entityName: "Diartdetail")
+        
+        do
+        {
+            let details = (try context.executeFetchRequest(request)) as! [Diartdetail]
+            for Diartdetail in details
+            {
+                print("\(Diartdetail.createdate!), \(Diartdetail.title!), \(Diartdetail.content!),")
+            }
+        }
+        catch
+        {
+            print("Fetch failed...")
+        }
+    }
+    
+    
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
