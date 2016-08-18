@@ -314,6 +314,7 @@ class DiaryTableViewController: UITableViewController
         {
             print("Fetch failed...")
         }
+        
     }
     
     

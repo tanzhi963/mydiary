@@ -13,6 +13,7 @@ import CoreData
 
 
 
+
 class AddNewDiaryViewController: UIViewController , UITextViewDelegate
 {
 
@@ -240,6 +241,10 @@ class AddNewDiaryViewController: UIViewController , UITextViewDelegate
         diary.setValue(NewDiartContent.text, forKey: "content")
         
         CoreDataStack.defaultStack().saveContext()
+        let diarytableview = DiaryTableViewController()
+        diarytableview.tableView.reloadData()
+        
+        self.navigationController?.popViewControllerAnimated(true)
         
         
     }
